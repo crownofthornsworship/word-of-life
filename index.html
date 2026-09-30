@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#092e36">
+  <title>Word of Life · Bible Word Journey</title>
+  <meta name="description" content="Connect letters, discover Bible stories, and journey through 25 illustrated word puzzles.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Word of Life · Bible Word Journey">
+  <meta property="og:description" content="Connect letters and discover 25 illustrated Bible word puzzles for the whole family.">
+  <meta property="og:url" content="https://crownofthornsworship.github.io/word-of-life/">
+  <meta property="og:image" content="https://crownofthornsworship.github.io/word-of-life/og.png">
+  <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Word of Life · Bible Word Journey">
+  <meta name="twitter:description" content="Connect letters and discover 25 illustrated Bible word puzzles.">
+  <meta name="twitter:image" content="https://crownofthornsworship.github.io/word-of-life/og.png">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="game" id="game">
+    <div class="scenery" id="scenery" aria-hidden="true"></div>
+    <div class="shade" aria-hidden="true"></div>
+    <header class="topbar">
+      <button class="brand" id="homeBtn" aria-label="Open chapter map"><span class="brand-mark">✦</span><span><b>WORD <em>OF</em> LIFE</b><small>BIBLE WORD JOURNEY</small></span></button>
+      <div class="top-actions"><button class="icon-button" id="soundBtn" aria-label="Turn sound off" title="Sound">♪</button><button class="icon-button" id="mapBtn" aria-label="Choose a puzzle" title="Chapter map">☷</button></div>
+    </header>
+    <main class="main">
+      <div class="chapter-heading"><span id="chapterName">THE GARDEN</span><h1 id="levelTitle">A new beginning</h1><div class="progress-line"><span id="levelLabel">PUZZLE 1 OF 25</span><span id="starsLabel">✦ 0</span></div></div>
+      <section class="play-panel" aria-label="Word puzzle">
+        <div class="panel-heading"><span>FIND THE STORY WORDS</span><button id="hintBtn" class="hint-button" type="button">✧ Hint <span id="hintCount">3</span></button></div>
+        <div id="wordBoard" class="word-board" aria-live="polite"></div>
+        <div class="current-word" id="currentWord" aria-live="polite">Connect the letters</div>
+        <div class="wheel" id="wheel" aria-label="Letter wheel"></div>
+        <svg id="trace" class="trace" aria-hidden="true"><polyline id="traceLine" points=""/></svg>
+        <div class="puzzle-actions"><button id="clearBtn" type="button">Clear</button><button id="shuffleBtn" type="button">Shuffle ↻</button></div>
+        <p id="feedback" class="feedback" role="status" aria-live="polite">Drag across letters or tap them one at a time.</p>
+      </section>
+      <div class="bottom-progress" id="bottomProgress" aria-label="Chapter progress"></div>
+    </main>
+  </div>
+  <div id="overlay" class="overlay hidden" role="dialog" aria-modal="true" aria-labelledby="overlayTitle">
+    <div class="overlay-card"><div class="overlay-scene" id="overlayScene"></div><div class="overlay-content"><span class="overlay-kicker" id="overlayKicker">STORY DISCOVERED</span><h2 id="overlayTitle">Well done!</h2><p id="overlayStory"></p><p class="reference" id="overlayReference"></p><div class="overlay-buttons"><button id="readBtn" class="secondary-button" type="button">♪ Read aloud</button><button id="nextBtn" class="primary-button" type="button">Next puzzle</button></div></div></div>
+  </div>
+  <div id="mapOverlay" class="overlay hidden" role="dialog" aria-modal="true" aria-labelledby="mapTitle"><div class="map-card"><div class="map-header"><div><span class="overlay-kicker">YOUR JOURNEY</span><h2 id="mapTitle">Choose a puzzle</h2></div><button id="closeMapBtn" class="icon-button" aria-label="Close chapter map">✕</button></div><div id="mapList" class="map-list"></div><p class="map-note">Finished puzzles can be replayed anytime. Progress stays on this device.</p></div></div>
+  <script src="game.js"></script>
+</body>
+</html>
