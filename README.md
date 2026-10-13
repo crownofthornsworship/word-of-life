@@ -14,3 +14,7 @@ Open `index.html` in a browser or serve this folder as a static website. Start w
 - Link the published game and illustrated preview from Light & Life Games and Salt & Light Web Studio.
 
 All art and code in this project were created for Word of Life. No ads, accounts, or data collection are used.
+
+## Next updates
+
+See [GAME_ROADMAP.md](GAME_ROADMAP.md) for input reliability, new puzzle mechanics, presentation, content, and release testing.
